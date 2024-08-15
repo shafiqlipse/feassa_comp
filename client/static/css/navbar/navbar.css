@@ -1,12 +1,12 @@
 .nav .navbaer {
   width: 100%;
-  background-color: red;
+  background-color: rgb(0, 88, 81);
   margin: 0;
   padding: 0;
 }
 .nav .navbaer .navbar-brands {
   background-color: white;
-  color: red;
+  color: rgb(0, 88, 81);
   padding: 10px 20px;
   text-transform: uppercase;
   font-weight: bold;
@@ -26,12 +26,15 @@
   color: white;
 }
 .nav .navbaer .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
-  color: rgb(0, 79, 236);
+  color: rgb(236, 181, 0);
 }
 .nav .navbaer .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
-  background-color: red;
+  background-color: rgb(0, 88, 81);
   border-radius: 0;
 }
 .nav .navbaer .navbar-collapse .buttons {
   width: 150px;
+}
+.nav .navbaer .navbar-collapse .buttons button {
+  background-color: rgb(0, 88, 81);
 }/*# sourceMappingURL=navbar.css.map */

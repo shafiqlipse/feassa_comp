@@ -17,7 +17,7 @@
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.1450980392);
   border-radius: 5px;
-  color: rgb(132, 3, 3);
+  background-color: rgb(0, 88, 81);
 }
 .home .dash-item .item-head .numbers {
   flex-direction: column;

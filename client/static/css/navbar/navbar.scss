@@ -1,12 +1,12 @@
 .nav {
   .navbaer {
     width: 100%;
-    background-color: red;
+    background-color: rgb(0, 88, 81);
     margin: 0;
     padding: 0;
     .navbar-brands {
       background-color: white;
-      color: red;
+      color: rgb(0, 88, 81);
       padding: 10px 20px;
       text-transform: uppercase;
       font-weight: bold;
@@ -26,17 +26,20 @@
             font-weight: bold;
             color: white;
             &:hover {
-              color: rgb(0, 79, 236);
+              color: rgb(236, 181, 0);
             }
           }
           .dropdown-menu {
-            background-color: red;
+            background-color: rgb(0, 88, 81);
             border-radius: 0;
           }
         }
       }
-      .buttons{
+      .buttons {
         width: 150px;
+        button {
+          background-color: rgb(0, 88, 81);
+        }
       }
     }
   }
