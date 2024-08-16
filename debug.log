@@ -10668,3 +10668,229 @@ Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Not Found: /dashboard/img/avatars/avatar-5.jpg
+Not Found: /dashboard/img/avatars/avatar-2.jpg
+Not Found: /dashboard/img/avatars/avatar-4.jpg
+Not Found: /dashboard/img/avatars/avatar-3.jpg
+Not Found: /dashboard/js/datatables.js
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Internal Server Error: /getTeamAthletes/
+Traceback (most recent call last):
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\dashboard\views.py", line 107, in getTeamAthletes
+    teams = teams.filter(sport_id=sport_id)
+            ^^^^^
+UnboundLocalError: cannot access local variable 'teams' where it is not associated with a value
+Internal Server Error: /getTeamAthletes/
+Traceback (most recent call last):
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\dashboard\views.py", line 116, in getTeamAthletes
+    return JsonResponse(data)
+           ^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\http\response.py", line 733, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+Internal Server Error: /getTeamAthletes/
+Traceback (most recent call last):
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\dashboard\views.py", line 104, in getTeamAthletes
+    teams = teams.filter(school_id=school_id)
+            ^^^^^
+UnboundLocalError: cannot access local variable 'teams' where it is not associated with a value
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Internal Server Error: /getTeamAthletes/
+Traceback (most recent call last):
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\dashboard\views.py", line 104, in getTeamAthletes
+    teams = teams.filter(school_id=school_id)
+            ^^^^^
+UnboundLocalError: cannot access local variable 'teams' where it is not associated with a value
+Internal Server Error: /getTeamAthletes/
+Traceback (most recent call last):
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\dashboard\views.py", line 104, in getTeamAthletes
+    teams = teams.filter(school_id=school_id)
+            ^^^^^
+UnboundLocalError: cannot access local variable 'teams' where it is not associated with a value
+Not Found: /get_athletes/
+Internal Server Error: /getTeamAthletes/
+Traceback (most recent call last):
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\dashboard\views.py", line 116, in getTeamAthletes
+    return JsonResponse(data)
+           ^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\http\response.py", line 733, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+E:\django\org\cms\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\org\cms\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\org\cms\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /get_athletes/
+Not Found: /get_athletes/
+Not Found: /get_athletes/
+Not Found: /get_athletes/
+Not Found: /get_athletes/
+Not Found: /get_athletes/
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /get_athletes/
+Not Found: /get_athletes/
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /get_athletes/
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/js/datatables.js
+E:\django\org\cms\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\org\cms\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\org\cms\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+E:\django\org\cms\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+E:\django\org\cms\dashboard\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\org\cms\dashboard\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\org\cms\dashboard\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+E:\django\org\cms\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\org\cms\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/js/datatables.js
+Not Found: /dashboard/teams/img/avatars/avatar-5.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-2.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-4.jpg
+Not Found: /dashboard/teams/img/avatars/avatar-3.jpg
+Not Found: /dashboard/teams/js/datatables.js

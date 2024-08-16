@@ -5,7 +5,7 @@ from .models import *
 class AthleteForm(forms.ModelForm):
     class Meta:
         model = Athlete
-        fields = ["school", "fname", "lname", "gender", "age"]
+        fields = ["school", "sport", "fname", "lname", "gender", "age"]
 
 
 class SchoolForm(forms.ModelForm):

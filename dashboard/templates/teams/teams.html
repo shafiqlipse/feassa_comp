@@ -87,6 +87,53 @@
           </button>
         </div>
       </div>
+      <script>
+        function getTeamAthletes() {
+          var gender_select = document.getElementById("id_genders");
+          var school_select = document.getElementById("id_school");
+          var sport_select = document.getElementById("id_sports");
+          var athlete_select = document.getElementById("id_athletes");
+        
+          var gender = gender_select.value;
+          var sport = sport_select.value;
+          var school = school_select.value;
+        
+          const url = `/getTeamAthletes/?school=${school}&sports=${sport}&genders=${gender}`;
+          console.log("Fetching URL:", url);
+        
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              athlete_select.innerHTML = "";
+        
+              if (data.athletes.length === 0) {
+                athlete_select.innerHTML = "<p>No athletes found.</p>";
+              } else {
+                data.athletes.forEach((athlete) => {
+                  var div = document.createElement("div");
+                  var label = document.createElement("label");
+                  var input = document.createElement("input");
+                  input.type = "checkbox";
+                  input.value = athlete.id;
+                  input.name = "athletes";
+                  label.innerText = `${athlete.fname} ${athlete.lname}`;
+                  div.appendChild(input);
+                  div.appendChild(label);
+                  athlete_select.appendChild(div);
+                });
+              }
+            })
+            .catch((error) => {
+              console.error("Error fetching athletes:", error);
+              athlete_select.innerHTML = "<p>Error fetching athletes. Please try again.</p>";
+            });
+        }
+        
+        // Attach the getAthletes function to the onchange events of the sport, gender, and school elements
+        document.getElementById("id_sports").onchange = getTeamAthletes;
+        document.getElementById("id_genders").onchange = getTeamAthletes;
+        document.getElementById("id_school").onchange = getTeamAthletes;
+      </script>
     </div>
   </div>
 </div>

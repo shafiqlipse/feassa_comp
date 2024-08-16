@@ -26,12 +26,12 @@ class SchoolTeamForm(forms.ModelForm):
     class Meta:
         model = SchoolTeam
         fields = [
-            "sport",
+            "sports",
             "school",
-            "gender",
+            "genders",
             "championship",
             "season",
-            "age",
+            "ages",
             "athletes",
         ]
         widgets = {

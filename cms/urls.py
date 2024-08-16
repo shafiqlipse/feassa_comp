@@ -5,6 +5,7 @@ from django.urls import path, include
 
 # from competition.views import get_teams
 from client.views import Home
+from dashboard.views import getTeamAthletes
 from accounts.views import user_login
 from football.apiviews import *
 from netball.apiviews import *
@@ -19,6 +20,7 @@ urlpatterns = [
     path("", Home, name="home"),
     path("login/", user_login, name="login"),
     # path("get_fteams/", getfoot_teams, name="get_fteams"),--football
+    path("getTeamAthletes/", getTeamAthletes, name="getTeamAthletes"),
     path("get_fteams/", getfoot_teams, name="get_fteams"),
     path("get_teams_for_match/", get_teams_for_match, name="get_teams_for_match"),
     path("get_athletes_for_team/", get_athletes_for_team, name="get_athletes_for_team"),

@@ -17,13 +17,13 @@ class Season(models.Model):
 
 class SchoolTeam(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE, null=True)
-    sport = models.ForeignKey(Sport, on_delete=models.CASCADE, null=True)
+    sports = models.ForeignKey(Sport, on_delete=models.CASCADE, null=True)
     championship = models.ForeignKey(Championship, on_delete=models.CASCADE, null=True)
     season = models.ForeignKey(Season, on_delete=models.CASCADE, null=True)
-    age = models.CharField(
+    ages = models.CharField(
         choices=(("U16", "U16"), ("U18", "U18"), ("U20", "U20")), max_length=50
     )
-    gender = models.CharField(
+    genders = models.CharField(
         max_length=10,
         choices=[("Male", "Male"), ("Female", "Female")],
     )

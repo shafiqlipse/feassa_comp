@@ -86,6 +86,38 @@ def teams(request):
 
 
 # add championships
+
+from django.http import JsonResponse
+from django.contrib import messages
+from django.shortcuts import get_object_or_404
+
+
+def getTeamAthletes(request):
+    school_id = request.GET.get("school")
+    sport_id = request.GET.get("sports")
+    gender = request.GET.get("genders")
+
+    athletes = Athlete.objects.all()
+
+    if school_id:
+        athletes = athletes.filter(school_id=school_id)
+
+    if sport_id:
+        athletes = athletes.filter(sport_id=sport_id)
+
+    if gender:
+        athletes = athletes.filter(gender=gender)
+
+    athletes_list = list(athletes.values("id", "fname", "lname"))
+
+    data = {"athletes": athletes_list}
+
+    return JsonResponse(data)
+
+
+# add championships
+# add championships
+# add championships
 def addteam(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
         form = SchoolTeamForm(request.POST, request.FILES)
