@@ -45,6 +45,7 @@ class School(models.Model):
 
 class Athlete(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
+    sport = models.ForeignKey(Sport, on_delete=models.CASCADE)
     fname = models.CharField(max_length=50)
     lname = models.CharField(max_length=50)
     gender = models.CharField(
