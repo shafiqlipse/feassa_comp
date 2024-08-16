@@ -16,13 +16,13 @@ def getfoot_teams(request):
     teams = SchoolTeam.objects.all()
 
     if sport_id:
-        teams = teams.filter(sport_id=sport_id)
+        teams = teams.filter(sports_id=sport_id)
 
     if gender:
-        teams = teams.filter(gender=gender)
+        teams = teams.filter(genders=gender)
 
     if age:
-        teams = teams.filter(age=age)
+        teams = teams.filter(ages=age)
 
     teams = teams.values("id", "school__name")
 
