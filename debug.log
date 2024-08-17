@@ -10947,3 +10947,40 @@ E:\django\org\cms\football\apiviews.py changed, reloading.
 Watching for file changes with StatReloader
 E:\django\org\cms\football\apiviews.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /dashboard/img/avatars/avatar-2.jpg
+Not Found: /dashboard/img/avatars/avatar-5.jpg
+Not Found: /dashboard/img/avatars/avatar-4.jpg
+Not Found: /dashboard/img/avatars/avatar-3.jpg
+Not Found: /dashboard/js/datatables.js
+Not Found: /sport/img/avatars/avatar-5.jpg
+Not Found: /sport/img/avatars/avatar-2.jpg
+Not Found: /sport/img/avatars/avatar-3.jpg
+Not Found: /sport/img/avatars/avatar-4.jpg
+Not Found: /sport/js/datatables.js
+Internal Server Error: /basketball5/basketball5
+Traceback (most recent call last):
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\accounts\decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\cms\basketball5\views.py", line 24, in Busketball5
+    basketball5 = Sport.objects.get(name="Basketball5X5")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\org\venv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+accounts.models.Sport.DoesNotExist: Sport matching query does not exist.
+E:\django\org\cms\basketball5\views.py changed, reloading.
+Watching for file changes with StatReloader

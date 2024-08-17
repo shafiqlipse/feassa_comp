@@ -21,7 +21,7 @@ from django.db import connection
 # Create your views here.
 @school_required
 def Busketball5(request):
-    basketball5 = Sport.objects.get(name="Basketball5X5")
+    basketball5 = Sport.objects.get(name="Basketball")
     b5comps = Basketball5.objects.filter(sport=basketball5)
 
     if request.method == "POST":
