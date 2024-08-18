@@ -11062,3 +11062,4 @@ django.db.utils.OperationalError: (1054, "Unknown column 'dashboard_schoolteam.s
 Not Found: /favicon.ico
 E:\django\org\cms\cms\settings.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
