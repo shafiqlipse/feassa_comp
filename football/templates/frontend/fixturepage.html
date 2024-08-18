@@ -26,7 +26,6 @@
     <th>NAME</th>
     <th>GOALS</th>
     <th>OG</th>
-
     <th>IN</th>
     <th>OUT</th>
     <th>START</th>
@@ -35,18 +34,8 @@
     <th>GOALS</th>
     <th>OG</th>
   </tr>
+  {% for athlete in fixture.team1.athletes.all %}
   <tr>
-    {% for athlete in fixture.team1.athletes.all %}
-  </tr>
-
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -54,9 +43,16 @@
     <td>{{athlete.fname}} {{athlete.lname}}</td>
     <td></td>
     <td></td>
-
-    {% endfor %} {% for athlete in fixture.team2.athletes.all %}
-
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  {% endfor %} {% for athlete in fixture.team2.athletes.all %}
+  <tr>
     <td></td>
     <td></td>
     <td></td>
@@ -93,7 +89,6 @@
     <th>BY</th>
     <th>MIN</th>
   </tr>
-
   <tr>
     <td></td>
     <td></td>
@@ -110,7 +105,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <tr>
     <th colspan="7">PENALTIES HOME TEAM</th>
     <th colspan="7">PENALTIES AWAY TEAM</th>
