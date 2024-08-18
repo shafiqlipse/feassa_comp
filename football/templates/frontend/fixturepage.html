@@ -26,8 +26,7 @@
     <th>NAME</th>
     <th>GOALS</th>
     <th>OG</th>
-  </tr>
-  <tr>
+
     <th>IN</th>
     <th>OUT</th>
     <th>START</th>
@@ -36,55 +35,7 @@
     <th>GOALS</th>
     <th>OG</th>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>21</td>
-    <td>OUMA ATIENO</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>06</td>
-    <td>ADONGO RUTH SHEILA</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>01</td>
-    <td>ABWIRE AUMA VELMA</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <!-- More rows for other players -->
+  {% for athlete in fixture.team1.athletes.all %}
   <tr>
     <td></td>
     <td></td>
@@ -97,26 +48,11 @@
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>{{athlete.fname}} {{athlete.lname}}</td>
     <td></td>
     <td></td>
   </tr>
+  {% endfor %}
   <tr>
     <th colspan="7">HOME GOALS</th>
     <th colspan="7">AWAY GOALS</th>
@@ -137,7 +73,7 @@
     <th>BY</th>
     <th>MIN</th>
   </tr>
-  {% for athlete in fixture.team1.athletes.all %}
+  {% for athlete in fixture.team2.athletes.all %}
   <tr>
     <td></td>
     <td></td>
@@ -150,26 +86,9 @@
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
     <td>{{athlete.fname}} {{athlete.lname}}</td>
-  </tr>
-  {% endfor %} {% for athlete in fixture.team2.athletes.all %}
-  <tr>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>{{athlete.fname}} {{athlete.lname}}</td>
   </tr>
   {% endfor %}
 
