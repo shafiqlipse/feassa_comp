@@ -1,0 +1,111 @@
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+<table border="1">
+  <tr>
+    <th colspan="7">{{fixture.team1}}</th>
+    <th colspan="7">{{fixture.team2}}</th>
+  </tr>
+  <tr>
+    <th>IN</th>
+    <th>OUT</th>
+    <th>START</th>
+    <th>NO</th>
+    <th>NAME</th>
+    <th>GOALS</th>
+    <th>OG</th>
+    <th>IN</th>
+    <th>OUT</th>
+    <th>START</th>
+    <th>NO</th>
+    <th>NAME</th>
+    <th>GOALS</th>
+    <th>OG</th>
+  </tr>
+  {% for team1_athlete, team2_athlete in athletes %}
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>
+      {% if team1_athlete %}{{team1_athlete.fname}} {{team1_athlete.lname}}
+      <!---->
+      {% endif %}
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>
+      {% if team2_athlete %}{{team2_athlete.fname}} {{team2_athlete.lname}}
+      <!---->
+      {% endif %}
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <th colspan="7">HOME GOALS</th>
+    <th colspan="7">AWAY GOALS</th>
+  </tr>
+  <tr>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th colspan="7">PENALTIES HOME TEAM</th>
+    <th colspan="7">PENALTIES AWAY TEAM</th>
+  </tr>
+  <tr>
+    <td colspan="7">NB:</td>
+    <td colspan="7">NB:</td>
+  </tr>
+  <tr>
+    <td colspan="7">Y/N:</td>
+    <td colspan="7">Y/N:</td>
+  </tr>
+</table>

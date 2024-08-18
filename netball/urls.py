@@ -29,6 +29,7 @@ urlpatterns = [
     ),
     # path("fixtures/", fixtures, name="fixtures"),
     path("addfixtures/", create_nfixture, name="addfixture"),
+    path("fixturen/<int:id>/", NFixturepage, name="fixturen"),
     # path("fixtures/", fixtures, name="fixtures"),
     path("Netball/<int:id>", Nutbol, name="Netball"),
     path("Netball_fixtures", NFixtures, name="Netfixtures"),
