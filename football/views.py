@@ -250,7 +250,22 @@ def Fixturepage(request, id):
     team2_fouls = events.filter(event_type="Foul", team=fixture.team2).count()
     team1_Save = events.filter(event_type="Save", team=fixture.team1).count()
     team2_Save = events.filter(event_type="Save", team=fixture.team2).count()
+    team1_athletes = list(fixture.team1.athletes.all())
+    team2_athletes = list(fixture.team2.athletes.all())
+
+    # Determine the maximum number of athletes
+    max_athletes = max(len(team1_athletes), len(team2_athletes))
+
+    # Pad the shorter list with None values
+    team1_athletes += [None] * (max_athletes - len(team1_athletes))
+    team2_athletes += [None] * (max_athletes - len(team2_athletes))
+
+    # Zip the two lists together
+    athletes = zip(team1_athletes, team2_athletes)
+
     context = {
+        "fixture": fixture,
+        "athletes": athletes,
         "fixture": fixture,
         "events": events,
         "team1_yellowcards": team1_yellowcards,
