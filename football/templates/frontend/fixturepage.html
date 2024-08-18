@@ -26,6 +26,8 @@
     <th>NAME</th>
     <th>GOALS</th>
     <th>OG</th>
+  </tr>
+  <tr>
     <th>IN</th>
     <th>OUT</th>
     <th>START</th>
@@ -34,7 +36,6 @@
     <th>GOALS</th>
     <th>OG</th>
   </tr>
-  {% for athlete in fixture.team1.athletes.all %}
   <tr>
     <td></td>
     <td></td>
@@ -47,9 +48,141 @@
     <td></td>
     <td></td>
     <td>21</td>
-    <td>{{athlete.fname}} {{athlete.lname}}</td>
+    <td>OUMA ATIENO</td>
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>06</td>
+    <td>ADONGO RUTH SHEILA</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>01</td>
+    <td>ABWIRE AUMA VELMA</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- More rows for other players -->
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th colspan="7">HOME GOALS</th>
+    <th colspan="7">AWAY GOALS</th>
+  </tr>
+  <tr>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+    <th>BY</th>
+    <th>MIN</th>
+  </tr>
+  {% for athlete in fixture.team1.athletes.all %}{% endfor %}
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>{{athlete.fname}} {{athlete.lname}}</td>
+  </tr>
+  {% endfor %} {% for athlete in fixture.team2.athletes.all %}{% endfor %}
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>{{athlete.fname}} {{athlete.lname}}</td>
+  </tr>
   {% endfor %}
+
+  <tr>
+    <th colspan="7">PENALTIES HOME TEAM</th>
+    <th colspan="7">PENALTIES AWAY TEAM</th>
+  </tr>
+  <tr>
+    <td colspan="7">NB:</td>
+    <td colspan="7">NB:</td>
+  </tr>
+  <tr>
+    <td colspan="7">Y/N:</td>
+    <td colspan="7">Y/N:</td>
+  </tr>
 </table>
