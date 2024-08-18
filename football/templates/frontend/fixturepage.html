@@ -52,6 +52,23 @@
     <td></td>
     <td></td>
   </tr>
+  {% endfor %} {% for athlete in fixture.team2.athletes.all %}
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>{{athlete.fname}} {{athlete.lname}}</td>
+    <td></td>
+    <td></td>
+  </tr>
   {% endfor %}
   <tr>
     <th colspan="7">HOME GOALS</th>
@@ -73,7 +90,7 @@
     <th>BY</th>
     <th>MIN</th>
   </tr>
-  {% for athlete in fixture.team2.athletes.all %}
+
   <tr>
     <td></td>
     <td></td>
@@ -86,7 +103,7 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>{{athlete.fname}} {{athlete.lname}}</td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
