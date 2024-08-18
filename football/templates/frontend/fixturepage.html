@@ -34,45 +34,40 @@
     <th>GOALS</th>
     <th>OG</th>
   </tr>
-  {% for athlete in fixture.team1.athletes.all %}
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>{{athlete.fname}} {{athlete.lname}}</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  {% endfor %} {% for athlete in fixture.team2.athletes.all %}
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>{{athlete.fname}} {{athlete.lname}}</td>
-    <td></td>
-    <td></td>
-  </tr>
+  {% with team1_athletes=fixture.team1.athletes.all %}
+  {% with team2_athletes=fixture.team2.athletes.all %}
+  {% with max_athletes=team1_athletes|length|default:0|max:team2_athletes|length|default:0 %}
+  {% for i in max_athletes|times %}
+    <tr>
+      {% with team1_athlete=team1_athletes|get_item:forloop.counter0|default:None %}
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{% if team1_athlete %}{{team1_athlete.fname}} {{team1_athlete.lname}}{% endif %}</td>
+      <td></td>
+      <td></td>
+      {% endwith %}
+      {% with team2_athlete=team2_athletes|get_item:forloop.counter0|default:None %}
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{% if team2_athlete %}{{team2_athlete.fname}} {{team2_athlete.lname}}{% endif %}</td>
+      <td></td>
+      <td></td>
+      {% endwith %}
+    </tr>
   {% endfor %}
+  {% endwith %}
+  {% endwith %}
+  {% endwith %}
   <tr>
     <th colspan="7">HOME GOALS</th>
     <th colspan="7">AWAY GOALS</th>
   </tr>
+  <!-- ... rest of the table ... -->
+</table>
   <tr>
     <th>BY</th>
     <th>MIN</th>
