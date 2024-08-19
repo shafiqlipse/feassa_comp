@@ -17,7 +17,7 @@ urlpatterns = [
     path("vfixturedetail/<int:id>", VFixtureDetail, name="vfixture"),
     path(
         "generate_fixtures/<int:id>/",
-        generate_fixtures_view,
+        generate_vfixtures_view,
         name="generate_fixtures",
     ),
     # path("fixtures/", fixtures, name="fixtures"),

@@ -111,7 +111,7 @@ from datetime import datetime
 
 # Create your views here.
 @school_required
-def generate_fixtures_view(request, id):
+def generate_vfixtures_view(request, id):
     volleyball = get_object_or_404(Volleyball, id=id)
     season = volleyball.season
     now = datetime.now()
