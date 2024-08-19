@@ -59,18 +59,33 @@ class B3FixtureForm(forms.ModelForm):
     class Meta:
         model = B3Fixture
         fields = [
+            "season",
+            "competition",
             "stage",
             "status",
             "round",
             "group",
             "venue",
             "date",
+            "time",
             "team1",
             "team2",
             "team1_score",
             "team2_score",
         ]
-        widgets = {"group": forms.Select(attrs={"class": "select2"})}
+        widgets = {
+            "season": forms.Select(attrs={"class": "form-control"}),
+            "competition": forms.Select(attrs={"class": "form-control"}),
+            "stage": forms.Select(attrs={"class": "form-control"}),
+            "status": forms.Select(attrs={"class": "form-control"}),
+            "round": forms.TextInput(attrs={"class": "form-control"}),
+            "group": forms.TextInput(attrs={"class": "form-control"}),
+            "venue": forms.TextInput(attrs={"class": "form-control"}),
+            "team1": forms.Select(attrs={"class": "form-control"}),
+            "team2": forms.Select(attrs={"class": "form-control"}),
+            "team1_score": forms.NumberInput(attrs={"class": "form-control"}),
+            "team2_score": forms.NumberInput(attrs={"class": "form-control"}),
+        }
 
 
 class MatchOfficialForm(forms.ModelForm):
