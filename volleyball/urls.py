@@ -18,7 +18,7 @@ urlpatterns = [
     path(
         "generate_fixtures/<int:id>/",
         generate_vfixtures_view,
-        name="generate_fixtures",
+        name="generate_vfixtures",
     ),
     # path("fixtures/", fixtures, name="fixtures"),
     path(
