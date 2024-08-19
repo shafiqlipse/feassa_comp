@@ -173,7 +173,7 @@ def edit_vfixtures_view(request, id):
 from django.db.models import Q
 
 
-def VVFixtureDetail(request, id):
+def VFixtureDetail(request, id):
     fixture = get_object_or_404(VFixture, id=id)
     officials = match_official.objects.filter(fixture_id=id)
     events = MatchEvent.objects.filter(match_id=id)
@@ -218,8 +218,8 @@ def VVFixtureDetail(request, id):
 
 
 
-def VVFixturepage(request, id):
-    fixture = get_object_or_404(VVFixture, id=id)
+def VFixturepage(request, id):
+    fixture = get_object_or_404(VFixture, id=id)
     events = MatchEvent.objects.filter(match_id=id)
     goals1 = events.filter(event_type="Goal", team=fixture.team1)
     goals2 = events.filter(event_type="Goal", team=fixture.team2)
@@ -259,13 +259,13 @@ def VVFixturepage(request, id):
 # Create your views here.
 @school_required
 def fixtures(request):
-    fixtures = VVFixture.objects.filter(competition_id=4).order_by("-date")
+    fixtures = VFixture.objects.filter(competition_id=4).order_by("-date")
     context = {"fixtures": fixtures}
     return render(request, "server/vfixtures.html", context)
 
 
 from django.shortcuts import render
-from .models import Sport, Volleyball, VGroup, VVFixture
+from .models import Sport, Volleyball, VGroup, VFixture
 
 # Create your views here.
 @school_required
@@ -298,7 +298,7 @@ def volleyballStandings(request):
                     }
 
                 # Update standings based on fixtures
-                fixtures = VVFixture.objects.filter(group=group)
+                fixtures = VFixture.objects.filter(group=group)
                 for fixture in fixtures:
                     if (
                         fixture.team1_score is not None
@@ -378,7 +378,7 @@ def volleyballStandings(request):
 
 
 from django.shortcuts import render
-from .models import Sport, Volleyball, VGroup, VVFixture
+from .models import Sport, Volleyball, VGroup, VFixture
 
 # Create your views here.
 @school_required
@@ -409,7 +409,7 @@ def generate_next_round_fixtures(request):
                         "gc": 0,
                     }
 
-                fixtures = VVFixture.objects.filter(group=group)
+                fixtures = VFixture.objects.filter(group=group)
                 for fixture in fixtures:
                     if (
                         fixture.team1_score is not None
@@ -537,6 +537,6 @@ def create_vfixture(request):
 
 
 def volfixtures(request):
-    fixures = VVFixture.objects.all()
+    fixures = VFixture.objects.all()
     context = {"fixures": fixures}
     return render(request, "frontend/volfixtures.html", context)
