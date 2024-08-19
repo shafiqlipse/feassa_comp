@@ -6,6 +6,7 @@ from handball.models import *
 from volleyball.models import *
 from rugby7s.models import *
 from rugby15s.models import *
+from hockey.models import *
 
 
 def football_tournaments(request):
@@ -31,6 +32,11 @@ def basketball5_tournaments(request):
 def handball_tournaments(request):
     htourns = Handball.objects.all()
     return {"htourns": htourns}
+
+
+def hockey_tournaments(request):
+    hotourns = Hockey.objects.all()
+    return {"hotourns": hotourns}
 
 
 def volleyball_tournaments(request):
@@ -85,3 +91,9 @@ def top_b3fixtures(request):
     today = date.today()
     b3fixtures = B3Fixture.objects.filter(date=today).order_by("-date")
     return {"b3fixtures": b3fixtures}
+
+
+def top_hofixtures(request):
+    today = date.today()
+    hot_fixtures = HoFixture.objects.filter(date=today).order_by("-date")
+    return {"hot_fixtures": hot_fixtures}
