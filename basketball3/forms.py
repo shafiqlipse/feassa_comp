@@ -53,8 +53,12 @@ GroupFormSet = inlineformset_factory(
 
 
 class B3FixtureForm(forms.ModelForm):
-    date = forms.DateTimeField(widget=forms.TextInput(attrs={"type": "date"}))
-    # time = forms.TimeField(widget=TimeInput(attrs={"type": "time"}))
+    date = forms.DateField(
+        widget=forms.DateInput(attrs={"type": "date", "class": "form-control"})
+    )
+    time = forms.TimeField(
+        widget=forms.TimeInput(attrs={"type": "time", "class": "form-control"})
+    )
 
     class Meta:
         model = B3Fixture
