@@ -59,41 +59,41 @@ from datetime import date
 
 def top_fixtures(request):
     today = date.today()
-    fot_fixtures = Fixture.objects.filter(date=today).order_by("-date")
+    fot_fixtures = Fixture.objects.filter(date=today).order_by("date")
     return {"fot_fixtures": fot_fixtures}
 
 
 def top_nfixtures(request):
     today = date.today()
-    net_fixtures = NFixture.objects.filter(date=today).order_by("-date")
+    net_fixtures = NFixture.objects.filter(date=today).order_by("date")
     return {"net_fixtures": net_fixtures}
 
 
 def top_vfixtures(request):
     today = date.today()
-    vol_fixtures = VFixture.objects.filter(date=today).order_by("-date")
+    vol_fixtures = VFixture.objects.filter(date=today).order_by("date")
     return {"vol_fixtures": vol_fixtures}
 
 
 def top_hfixtures(request):
     today = date.today()
-    han_fixtures = HFixture.objects.filter(date=today).order_by("-date")
+    han_fixtures = HFixture.objects.filter(date=today).order_by("date")
     return {"han_fixtures": han_fixtures}
 
 
 def top_bfixtures(request):
     today = date.today()
-    bas5_fixtures = B5Fixture.objects.filter(date=today).order_by("-date")
+    bas5_fixtures = B5Fixture.objects.filter(date=today).order_by("date")
     return {"bas5_fixtures": bas5_fixtures}
 
 
 def top_b3fixtures(request):
     today = date.today()
-    b3fixtures = B3Fixture.objects.filter(date=today).order_by("-date")
+    b3fixtures = B3Fixture.objects.filter(date=today).order_by("date")
     return {"b3fixtures": b3fixtures}
 
 
 def top_hofixtures(request):
     today = date.today()
-    hot_fixtures = HoFixture.objects.filter(date=today).order_by("-date")
+    hot_fixtures = HoFixture.objects.filter(date=today).order_by("date")
     return {"hot_fixtures": hot_fixtures}
