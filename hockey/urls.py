@@ -14,7 +14,7 @@ urlpatterns = [
     path("fixtures/", fixtures, name="hockey_fixtures"),
     path("futourn/<int:id>", hotourn_details, name="hockey_tournament"),
     path("hofixture/<int:id>", edit_hofixtures_view, name="update_hofixture"),
-    path("fixturedetail/<int:id>", HoFixtureDetail, name="nfixture"),
+    path("fixturedetail/<int:id>", HoFixtureDetail, name="hofixture"),
     path("nstandings/", hockeyStandings, name="hockey_standings"),
     path(
         "generate_hofixtures/<int:id>/",
