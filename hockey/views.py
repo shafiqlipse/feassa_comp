@@ -438,13 +438,13 @@ def generate_next_round_fixtures(request):
     return render(request, "server/hotournament.html", context)
 
 
-def netfixtures(request):
+def hotfixtures(request):
     fixures = HoFixture.objects.all()
     context = {"fixures": fixures}
     return render(request, "frontend/hotfixtures.html", context)
 
 
-def create_nfixture(request):
+def create_hofixture(request):
     if request.method == "POST":
         fixture_form = FixtureForm(request.POST)
         if fixture_form.is_valid():
