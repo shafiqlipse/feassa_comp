@@ -313,4 +313,3 @@ def netbollStandings(request):
     }
 
     return render(request, "frontend/netstandings.html", context)
-
