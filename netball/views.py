@@ -88,7 +88,7 @@ def ntourn_details(request, id):
         formset = GroupFormset(instance=tournament)
         fixture_form = FixtureForm()
 
-    fixtures = NFixture.objects.filter(competition=tournament)
+    fixtures = NFixture.objects.all()
     results = NFixture.objects.filter(competition=tournament, status="InPlay")
 
     context = {
