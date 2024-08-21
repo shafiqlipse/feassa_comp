@@ -91,7 +91,7 @@ def r15tourn_details(request, id):
         formset = GroupFormset(instance=tournament)
         fixture_form = R15FixtureForm()
 
-    fixtures = R15Fixture.objects.filter(competition=tournament)
+    fixtures = R15Fixture.objects.all()
     results = R15Fixture.objects.filter(competition=tournament, status="InPlay")
 
     context = {
