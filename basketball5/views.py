@@ -96,13 +96,14 @@ def b5tourn_details(request, id):
             error_message = "There was an error in the form submission. Please correct the errors below."
     else:
         fixture_form = B5FixtureForm()
-    fixtures = B5Fixture.objects.filter(competition=tournament)
+    fixtures = B5Fixture.objects.all()
     context = {
         "tournament": tournament,
         "formset": formset,
         "fixtures": fixtures,
         "fgroups": fgroups,
     }
+    
     return render(request, "server/b5tournament.html", context)
 
 
