@@ -184,10 +184,11 @@
                 <td>{{ fixture.time }}</td>
                 <td>{{ fixture.date|date:"F j, Y" }}</td>
                 <td>
-                  <a href="{% url 'update_r15fixture' fixture.id %}">Edit</a>
+                  <a href="{% url 'update_nfixture' fixture.id %}">Edit</a>
                 </td>
                 <td>
-                  <a href="{% url 'r15fixture' fixture.id %}">Manage</a>
+                  <a href="{% url 'nfixture' fixture.id %}">Manage</a>
+                  <a href="{% url 'fixturen' fixture.id%}" target="blank">rp</a>
                 </td>
               </tr>
               {% endfor %}
