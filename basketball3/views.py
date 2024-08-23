@@ -96,7 +96,7 @@ def b3tourn_details(request, id):
             error_message = "There was an error in the form submission. Please correct the errors below."
     else:
         fixture_form = B3FixtureForm()
-    fixtures = B3Fixture.objects.filter(competition=tournament)
+    fixtures = B3Fixture.objects.all()
     context = {
         "tournament": tournament,
         "formset": formset,
