@@ -84,7 +84,7 @@ def Hotbol(request, id):
         competition=competition, status="Pending"
     ).order_by(F("group").asc(nulls_last=True), "date", "time")
     results = HoFixture.objects.filter(
-        status="InPlay", competition=competition
+        status="InPlay"
     ).order_by("date")
     rankings = get_rankings(competition)
 
