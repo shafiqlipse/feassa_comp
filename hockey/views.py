@@ -88,7 +88,7 @@ def hotourn_details(request, id):
         formset = GroupFormset(instance=tournament)
         fixture_form = FixtureForm()
 
-    fixtures = HoFixture.objects.filter(competition=tournament)
+    fixtures = HoFixture.objects.all()
     results = HoFixture.objects.filter(competition=tournament, status="InPlay")
 
     context = {
