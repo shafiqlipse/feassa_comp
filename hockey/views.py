@@ -155,7 +155,7 @@ def edit_hofixtures_view(request, id):
         if form.is_valid():
             form.save()
             return redirect(
-                "nfixture", id=id
+                "hofixture", id=id
             )  # Replace 'success_url' with the actual URL
     else:
         form = FixtureForm(instance=fixture)
